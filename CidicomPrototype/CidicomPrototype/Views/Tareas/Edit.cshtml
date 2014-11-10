@@ -1,0 +1,62 @@
+﻿@model CidicomPrototype.Models.Tareas
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Tareas</legend>
+
+        @Html.HiddenFor(model => model.IDTareas)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.nameTareas)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.nameTareas)
+            @Html.ValidationMessageFor(model => model.nameTareas)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IDTecnico, "Tecnico")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("IDTecnico", String.Empty)
+            @Html.ValidationMessageFor(model => model.IDTecnico)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IDServicios, "Servicios")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("IDServicios", String.Empty)
+            @Html.ValidationMessageFor(model => model.IDServicios)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Estado)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Estado)
+            @Html.ValidationMessageFor(model => model.Estado)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

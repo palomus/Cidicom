@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CidicomPrototype.Models.Tareas>
+
+@{
+    ViewBag.Title = "Index";
+    ViewBag.viewMessage = "Lista de Tareas";
+}
+
+<h2>Listado de Tareas</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nameTareas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tecnico.NameTecnico)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Servicios.nameServicios)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nameTareas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tecnico.NameTecnico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Servicios.nameServicios)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDTareas }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDTareas }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDTareas })
+        </td>
+    </tr>
+}
+
+</table>

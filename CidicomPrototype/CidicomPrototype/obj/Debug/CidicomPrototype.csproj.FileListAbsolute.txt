@@ -28,3 +28,5 @@ C:\Users\ecasallas\Documents\GitHub\Cidicom\CidicomPrototype\CidicomPrototype\bi
 C:\Users\ecasallas\Documents\GitHub\Cidicom\CidicomPrototype\CidicomPrototype\obj\Debug\CidicomPrototype.dll
 C:\Users\ecasallas\Documents\GitHub\Cidicom\CidicomPrototype\CidicomPrototype\obj\Debug\CidicomPrototype.pdb
 C:\Users\ecasallas\Documents\GitHub\Cidicom\CidicomPrototype\CidicomPrototype\obj\Debug\CidicomPrototype.csprojResolveAssemblyReference.cache
+C:\Users\ecasallas\Documents\GitHub\Cidicom\CidicomPrototype\CidicomPrototype\obj\Debug\CidicomPrototype.Migrations.InitialCreate.resources
+C:\Users\ecasallas\Documents\GitHub\Cidicom\CidicomPrototype\CidicomPrototype\obj\Debug\CidicomPrototype.csproj.GenerateResource.Cache

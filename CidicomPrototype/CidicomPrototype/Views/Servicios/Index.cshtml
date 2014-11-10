@@ -1,0 +1,39 @@
+﻿@model IEnumerable<CidicomPrototype.Models.Servicios>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nameServicios)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Activos.nameActivos)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nameServicios)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Activos.nameActivos)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDServicios }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDServicios }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDServicios })
+        </td>
+    </tr>
+}
+
+</table>

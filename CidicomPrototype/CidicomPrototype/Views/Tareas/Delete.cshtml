@@ -1,0 +1,47 @@
+﻿@model CidicomPrototype.Models.Tareas
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Tareas</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.nameTareas)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.nameTareas)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Tecnico.NameTecnico)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Tecnico.NameTecnico)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Servicios.nameServicios)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Servicios.nameServicios)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Estado)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Estado)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

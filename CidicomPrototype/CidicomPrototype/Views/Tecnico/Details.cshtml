@@ -1,0 +1,22 @@
+﻿@model CidicomPrototype.Models.Tecnico
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Tecnico</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NameTecnico)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NameTecnico)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.IDTecnico }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

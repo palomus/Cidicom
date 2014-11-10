@@ -126,10 +126,28 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ActivosController.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\ServiciosController.cs" />
+    <Compile Include="Controllers\SitiosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TareasController.cs" />
+    <Compile Include="Controllers\TecnicoController.cs" />
+    <Compile Include="DAL\CidicomContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201411101708210_InitialCreate.cs" />
+    <Compile Include="Migrations\201411101708210_InitialCreate.Designer.cs">
+      <DependentUpon>201411101708210_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Activos.cs" />
+    <Compile Include="Models\Clientes.cs" />
+    <Compile Include="Models\Servicios.cs" />
+    <Compile Include="Models\Sitios.cs" />
+    <Compile Include="Models\Tareas.cs" />
+    <Compile Include="Models\Tecnico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -221,13 +239,47 @@
     </Content>
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Cliente\Index.cshtml" />
+    <Content Include="Views\Cliente\Details.cshtml" />
+    <Content Include="Views\Cliente\Create.cshtml" />
+    <Content Include="Views\Cliente\Edit.cshtml" />
+    <Content Include="Views\Cliente\Delete.cshtml" />
+    <Content Include="Views\Sitios\Index.cshtml" />
+    <Content Include="Views\Sitios\Details.cshtml" />
+    <Content Include="Views\Sitios\Create.cshtml" />
+    <Content Include="Views\Sitios\Edit.cshtml" />
+    <Content Include="Views\Sitios\Delete.cshtml" />
+    <Content Include="Views\Activos\Index.cshtml" />
+    <Content Include="Views\Activos\Details.cshtml" />
+    <Content Include="Views\Activos\Create.cshtml" />
+    <Content Include="Views\Activos\Edit.cshtml" />
+    <Content Include="Views\Activos\Delete.cshtml" />
+    <Content Include="Views\Servicios\Index.cshtml" />
+    <Content Include="Views\Servicios\Details.cshtml" />
+    <Content Include="Views\Servicios\Create.cshtml" />
+    <Content Include="Views\Servicios\Edit.cshtml" />
+    <Content Include="Views\Servicios\Delete.cshtml" />
+    <Content Include="Views\Tareas\Index.cshtml" />
+    <Content Include="Views\Tareas\Details.cshtml" />
+    <Content Include="Views\Tareas\Create.cshtml" />
+    <Content Include="Views\Tareas\Edit.cshtml" />
+    <Content Include="Views\Tareas\Delete.cshtml" />
+    <Content Include="Views\Tecnico\Index.cshtml" />
+    <Content Include="Views\Tecnico\Details.cshtml" />
+    <Content Include="Views\Tecnico\Create.cshtml" />
+    <Content Include="Views\Tecnico\Edit.cshtml" />
+    <Content Include="Views\Tecnico\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201411101708210_InitialCreate.resx">
+      <DependentUpon>201411101708210_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

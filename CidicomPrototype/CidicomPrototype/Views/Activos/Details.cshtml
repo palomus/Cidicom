@@ -1,0 +1,29 @@
+﻿@model CidicomPrototype.Models.Activos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Activos</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.nameActivos)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.nameActivos)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Sitios.nameSitios)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Sitios.nameSitios)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.IDActivos }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
