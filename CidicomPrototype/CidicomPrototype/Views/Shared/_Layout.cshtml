@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Cidicom - @ViewBag.Title</title>
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -14,7 +14,13 @@
             <nav>
                         <ul id="menu">
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
                             <li>@Html.ActionLink("Clientes", "Index", "Cliente")</li>
+                            <li>@Html.ActionLink("Sitios","Index","Sitios")</li>
+                            <li>@Html.ActionLink("Activos", "Index", "Activos")</li>
+                            <li>@Html.ActionLink("Servicios", "Index", "Servicios")</li>
+                            <li>@Html.ActionLink("Tareas", "Index", "Tareas")</li>
+                            <li>@Html.ActionLink("Tecnicos", "Index", "Tecnico")</li>
                         </ul>
                     </nav>
         </header>
@@ -23,7 +29,7 @@
     @RenderBody()
     <div class="footer">
         <footer>
-            <h5>Cidicom @DateTime.Now.Year</h5>
+            <h5> &copy Cidicom @DateTime.Now.Year</h5>
         </footer>
     </div>
     @Scripts.Render("~/bundles/jquery")

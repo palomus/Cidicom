@@ -269,6 +269,7 @@
     <Content Include="Views\Tecnico\Create.cshtml" />
     <Content Include="Views\Tecnico\Edit.cshtml" />
     <Content Include="Views\Tecnico\Delete.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

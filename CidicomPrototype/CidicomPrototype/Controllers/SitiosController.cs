@@ -16,12 +16,25 @@ namespace CidicomPrototype.Controllers
 
         //
         // GET: /Default1/
-
-        public ActionResult Index()
+        // ~/Index/2
+        public ActionResult Index(int id = 0)
         {
             var sitios = db.Sitios.Include(s => s.Clientes);
-            return View(sitios.ToList());
+            if (sitios == null)
+            {
+                return HttpNotFound();
+            }
+            if (id != 0)
+            {
+                return View(sitios.Where(x => x.IDCliente == id).ToList());
+            }
+            else
+            {
+                return View(sitios.ToList());
+            }
         }
+
+
 
         //
         // GET: /Default1/Details/5

@@ -1,6 +1,8 @@
 ﻿@{
     ViewBag.Title = "Home";
-    ViewBag.viewMessage = "Bienvenido a Cidicom";
+    ViewBag.viewMessage = "Bienvenido a la aplicación";
 }
 
-<h2>:P</h2>
+<h2>Si desea ver la lista de clientes, por favor siga el siguiente link</h2>
+
+<p>@Html.ActionLink("Clientes", "Index", "Cliente")</p>

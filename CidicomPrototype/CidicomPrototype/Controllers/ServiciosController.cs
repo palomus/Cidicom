@@ -17,10 +17,22 @@ namespace CidicomPrototype.Controllers
         //
         // GET: /Servicios/
 
-        public ActionResult Index()
+        public ActionResult Index(int id = 0)
         {
             var servicios = db.Servicios.Include(s => s.Activos);
-            return View(servicios.ToList());
+            
+            if (servicios == null)
+            {
+                return HttpNotFound();
+            }
+            if (id != 0)
+            {
+                return View(servicios.Where(x => x.IDActivos == id).ToList());
+            }
+            else
+            {
+                return View(servicios.ToList()); 
+            }
         }
 
         //

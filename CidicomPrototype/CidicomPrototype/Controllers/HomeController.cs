@@ -101,5 +101,11 @@ namespace CidicomPrototype.Controllers
                 return View();
             }
         }
+
+        //About:  /Home/About
+        public ActionResult About()
+        {
+            return View();
+        }
     }
 }

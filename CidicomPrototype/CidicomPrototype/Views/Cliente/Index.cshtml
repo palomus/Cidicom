@@ -1,10 +1,11 @@
 ﻿@model IEnumerable<CidicomPrototype.Models.Clientes>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Clientes";
+    ViewBag.viewMessage = "Clientes";
 }
 
-<h2>Index</h2>
+<h2>Clientes</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -25,7 +26,8 @@
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.IDCliente }) |
             @Html.ActionLink("Details", "Details", new { id=item.IDCliente }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IDCliente })
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDCliente })|
+            @Html.ActionLink("sus Sitios","Index","Sitios", new { id = item.IDCliente },null)
         </td>
     </tr>
 }
